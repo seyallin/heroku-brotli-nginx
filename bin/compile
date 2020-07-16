@@ -43,7 +43,7 @@ echo "=== To try configure... ==="
 	--error-log-path=${VAR}/log/nginx/error.log \
 	--with-http_realip_module \
 	--with-http_ssl_module
-	--add-dynamic-module=${root_dir}/ngx_brotli
+	--add-dynamic-module=../ngx_brotli
 
 echo "=== To try make modules ==="
 make modules
