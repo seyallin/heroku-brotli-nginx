@@ -17,7 +17,11 @@ rm nginx-$NGINX_VERSION.tar.gz
 
 echo "=== Load nginx-$NGINX_VERSION ==="
 
-cp -r 'ngx_brotli' ${root_dir}/ngx_brotli
+cd ${root_dir}
+git clone https://github.com/eustas/ngx_brotli.git
+cd ${root_dir}/ngx_brotli
+git submodule update --init
+cd ${root_dir}
 
 echo "=== Load ngx_brotli ==="
 
@@ -43,9 +47,6 @@ echo "=== To try configure... ==="
 
 echo "=== To try make modules ==="
 make modules
-
-rm -r ${root_dir}/ngx_brotli
-
 
 echo "=== to try copying ==="
 cp objs/ngx_http_brotli_filter_module.so ${ETC}/nginx/modules/ngx_http_brotli_filter_module.so
