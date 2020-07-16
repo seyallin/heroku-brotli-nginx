@@ -1,9 +1,2 @@
 #!/usr/bin/env bash
-
-apt-add-repository -y ppa:hda-me/nginx-stable
-
-apt-get update
-
-apt-get install brotli nginx-module-brotli
-
-exit 0
+apt-get install brotli
