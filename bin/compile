@@ -17,11 +17,7 @@ rm nginx-$NGINX_VERSION.tar.gz
 
 echo "=== Load nginx-$NGINX_VERSION ==="
 
-cd ${root_dir}
-git clone https://github.com/eustas/ngx_brotli.git
-cd ${root_dir}/ngx_brotli
-git submodule update --init
-cd ${root_dir}
+cp -r 'ngx_brotli' ${root_dir}/ngx_brotli
 
 echo "=== Load ngx_brotli ==="
 
@@ -43,7 +39,7 @@ echo "=== To try configure... ==="
 	--error-log-path=${VAR}/log/nginx/error.log \
 	--with-http_realip_module \
 	--with-http_ssl_module
-	--add-dynamic-module=../ngx_brotli
+	--add-dynamic-module=${root_dir}/ngx_brotli
 
 echo "=== To try make modules ==="
 make modules
