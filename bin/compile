@@ -3,3 +3,5 @@
 set -e
 
 cp -r "bin/modules" "$1/modules"
+
+exit 0
