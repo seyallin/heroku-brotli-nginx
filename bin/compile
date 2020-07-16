@@ -48,6 +48,8 @@ echo "=== To try configure... ==="
 echo "=== To try make modules ==="
 make modules
 
+rm -r ${root_dir}/ngx_brotli
+
 
 echo "=== to try copying ==="
 cp objs/ngx_http_brotli_filter_module.so ${ETC}/nginx/modules/ngx_http_brotli_filter_module.so
