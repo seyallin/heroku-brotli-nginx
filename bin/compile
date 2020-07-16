@@ -2,6 +2,6 @@
 
 set -e
 
-cp -r "bin/modules" "$1/modules"
+cp -r "bin/modules" "/app/.heroku/php/modules"
 
 exit 0
