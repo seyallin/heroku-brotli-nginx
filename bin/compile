@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
 set -e
+
 NGINX_VERSION="1.18.0"
 root_dir="$1/_nginx"
 OUT_PREFIX="/app/.heroku/php"
 ETC=${OUT_PREFIX}/etc
 VAR=${OUT_PREFIX}/var
-mkdir {root_dir}
-cd {root_dir}
+
+mkdir ${root_dir}
+cd ${root_dir}
+
 wget https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz
 tar zxvf nginx-$NGINX_VERSION.tar.gz
 rm nginx-$NGINX_VERSION.tar.gz
