@@ -55,4 +55,8 @@ else
   echo "dir is not exists: $root_dir/ngx_brotli"
 fi
 
+cd ${root_dir}
+rm -R ${root_dir}/nginx-$NGINX_VERSION
+
+
 exit 0
