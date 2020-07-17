@@ -49,7 +49,8 @@ then
     --add-dynamic-module=${root_dir}/ngx_brotli
 
   echo "=== To try make modules ==="
-  make modules
+  make
+  make install
 
   if [ ! -d ${OUT_PREFIX}/modules ]
   then
