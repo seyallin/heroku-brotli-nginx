@@ -46,7 +46,6 @@ then
     --error-log-path=${VAR}/log/nginx/error.log \
     --with-http_realip_module \
     --with-http_ssl_module \
-    --with-compat \
     --add-dynamic-module=${root_dir}/ngx_brotli
 
   echo "=== To try make modules ==="
