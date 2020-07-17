@@ -51,18 +51,6 @@ then
   echo "=== To try make modules ==="
   make
   make install
-
-  if [ ! -d ${OUT_PREFIX}/modules ]
-  then
-    mkdir ${OUT_PREFIX}/modules
-  fi
-
-  echo "=== to try copying ==="
-  cp objs/ngx_http_brotli_filter_module.so ${OUT_PREFIX}/modules/ngx_http_brotli_filter_module.so
-  cp objs/ngx_http_brotli_static_module.so ${OUT_PREFIX}/modules/ngx_http_brotli_static_module.so
-
-  chmod 644 ${OUT_PREFIX}/modules/ngx_http_brotli_filter_module.so
-  chmod 644 ${OUT_PREFIX}/modules/ngx_http_brotli_static_module.so
 else
   echo "dir is not exists: $root_dir/ngx_brotli"
 fi
