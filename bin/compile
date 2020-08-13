@@ -56,7 +56,8 @@ else
 fi
 
 cd ${root_dir}
-rm -R ${root_dir}/nginx-$NGINX_VERSION
+cd ..
+rm -R ${root_dir}
 
 
 exit 0
