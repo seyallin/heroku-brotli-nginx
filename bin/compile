@@ -2,13 +2,12 @@
 
 set -e
 
+
 command="nginx -v"
 nginxv=$( ${command} 2>&1 )
-nginxlocal=$(echo $nginxv | grep -o '[0-9.]*$')
+NGINX_VERSION=$(echo $nginxv | grep -o '[0-9.]*$')
+echo "=== Check the nginx version: $NGINX_VERSION ==="
 
-echo $nginxlocal
-
-NGINX_VERSION="1.18.0"
 root_dir="$1/_nginx"
 OUT_PREFIX="/app/.heroku/php"
 ETC=${OUT_PREFIX}/etc
