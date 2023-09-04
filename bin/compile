@@ -23,7 +23,7 @@ rm nginx-$NGINX_VERSION.tar.gz
 echo "=== Load nginx-$NGINX_VERSION ==="
 
 cd ${root_dir}
-git clone https://github.com/google/ngx_brotli.git
+git clone https://github.com/google/ngx_brotli.git -b v1.0.0rc
 cd ${root_dir}/ngx_brotli
 git submodule update --init
 cd ${root_dir}
